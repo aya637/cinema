@@ -1,0 +1,14 @@
+{
+    "name": "screenwave/cinema-app",
+    "description": "Cinema booking application",
+    "type": "project",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "."
+        }
+    }
+}
+
