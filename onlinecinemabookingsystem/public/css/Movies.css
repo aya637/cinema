@@ -1,0 +1,123 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f3ff; /* soft light lavender background */
+  color: #2d0a57; /* dark purple text */
+}
+
+/* Navigation */
+header {
+  background-color: #2d0a57; /* dark royal purple */
+  padding: 10px 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d4b3ff; /* soft light purple accent */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+  color: #d4b3ff;
+  transform: scale(1.1);
+}
+
+/* Movies Section */
+.movies-section {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.movies-section h2 {
+  font-size: 28px;
+  color: #4b0082; /* indigo purple */
+  margin-bottom: 15px;
+}
+
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.movie-card {
+  background-color: #ffffff; /* white card */
+  color: #2d0a57;
+  padding: 12px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 200px;
+  box-shadow: 0 2px 8px rgba(45, 10, 87, 0.15);
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(75, 0, 130, 0.3);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.movie-card h3 {
+  font-size: 16px;
+  margin-top: 8px;
+  color: #4b0082;
+}
+
+.movie-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Buttons */
+button {
+  background-color: #4b0082; /* purple */
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #6a0dad; /* lighter purple on hover */
+}
+
+/* Footer */
+footer {
+  background-color: #2d0a57;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 13px;
+  color: #e8d9ff;
+}
