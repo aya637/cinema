@@ -1,0 +1,308 @@
+/* --- 1. IMPORT FONT (Ensures "Inter" loads) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+/* --- CORE STYLES FROM HOMEPAGE --- */
+*, *::before, *::after { 
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    background: radial-gradient(circle at top left, #4e46e5 0, #0b021f 40%, #050014 100%);
+    /* FIX: Prevents gradient from repeating/breaking on scroll */
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    color: #f9fafb;
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.2s; 
+}
+
+.cb-container { 
+    width: 100%; 
+    max-width: 1120px; 
+    margin: 0 auto; 
+    padding: 0 1.5rem; 
+}
+
+/* HEADER */
+.glassmorphism {
+    background: rgba(5, 6, 22, 0.85);
+    /* FIX: Added webkit prefix for Safari support */
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.cb-header { 
+    position: sticky; 
+    top: 0; 
+    z-index: 50; 
+}
+
+.cb-header-inner { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    height: 80px; 
+}
+
+.cb-nav { 
+    display: flex; 
+    gap: 2rem; 
+}
+
+.cb-nav a:hover { 
+    color: #fff; 
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.5); 
+}
+
+/* BUTTONS */
+.btn { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0.6rem 1.2rem; 
+    border-radius: 999px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    border: none; 
+}
+
+.btn-primary { 
+    background: linear-gradient(to right, #6366f1, #8b5cf6); 
+    color: white; 
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4); 
+    transition: transform 0.2s; 
+}
+
+.btn-primary:hover { 
+    transform: translateY(-2px); 
+}
+
+.btn-outline { 
+    border: 1px solid rgba(148, 163, 184, 0.4); 
+    background: transparent; 
+    color: #cbd5f5; 
+}
+
+.btn-outline:hover { 
+    border-color: #fff; 
+    color: #fff; 
+    background: rgba(255,255,255,0.05); 
+}
+
+/* --- MOVIE DETAILS SPECIFIC STYLES --- */
+
+/* Layout */
+.details-hero { 
+    padding: 4rem 0; 
+}
+
+.details-grid { 
+    display: grid; 
+    grid-template-columns: 350px 1fr; 
+    gap: 4rem; 
+    align-items: start; 
+}
+
+/* Poster */.poster-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.poster-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+/* Info Side */
+.movie-tagline { 
+    color: #818cf8; 
+    text-transform: uppercase; 
+    letter-spacing: 0.15em; 
+    font-size: 0.85rem; 
+    margin-bottom: 1rem; 
+    font-weight: 600; 
+}
+
+.movie-h1 { 
+    font-size: 3.5rem; 
+    font-weight: 800; 
+    margin: 0 0 1.5rem 0; 
+    line-height: 1.1; 
+    background: linear-gradient(to right, #fff, #cbd5f5); 
+    /* FIX: Added standard property alongside webkit */
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+/* Metadata Badges */
+.meta-row { 
+    display: flex; 
+    gap: 1rem; 
+    margin-bottom: 2rem; 
+    flex-wrap: wrap; 
+}
+
+.meta-badge { 
+    background: rgba(255,255,255,0.08); 
+    padding: 0.4rem 1rem; 
+    border-radius: 8px; 
+    font-size: 0.9rem; 
+    color: #e0e7ff; 
+    border: 1px solid rgba(255,255,255,0.1); 
+    display: flex; 
+    align-items: center; 
+    gap: 0.5rem; 
+}
+
+.rating-star { 
+    color: #fbbf24; 
+}
+
+/* Description */
+.synopsis-box { 
+    background: rgba(15, 23, 42, 0.6); 
+    padding: 2rem; 
+    border-radius: 1.2rem; 
+    border: 1px solid rgba(148, 163, 184, 0.1); 
+    margin-bottom: 2.5rem; 
+}
+
+.synopsis-text { 
+    line-height: 1.8; 
+    color: #cbd5f5; 
+    font-size: 1.05rem; 
+    margin: 0; 
+}
+
+.synopsis-label { 
+    display: block; 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+    color: #94a3b8; 
+    margin-bottom: 0.8rem; 
+    letter-spacing: 0.05em; 
+}
+
+/* SHOWTIMES SECTION */
+.showtimes-section { 
+    padding: 3rem 0 5rem; 
+    background: rgba(2, 6, 23, 0.5); 
+    border-top: 1px solid rgba(255,255,255,0.05); 
+}
+
+.section-h2 { 
+    font-size: 2rem; 
+    margin-bottom: 2rem; 
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    gap: 1rem; 
+}
+
+.section-h2 span { 
+    font-size: 2.5rem; 
+}
+
+.date-group { 
+    margin-bottom: 2.5rem; 
+}
+
+.date-header { 
+    font-size: 1.2rem; 
+    color: #a5b4fc; 
+    margin-bottom: 1rem; 
+    font-weight: 600; 
+    border-left: 4px solid #6366f1; 
+    padding-left: 1rem; 
+}
+
+.time-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+    gap: 1rem; 
+}
+
+.showtime-card {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.showtime-card:hover {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: #818cf8;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.st-time { 
+    font-size: 1.4rem; 
+    font-weight: 700; 
+    color: #fff; 
+}
+
+.st-screen { 
+    font-size: 0.8rem; 
+    color: #94a3b8; 
+    text-transform: uppercase; 
+}
+
+.st-price { 
+    font-size: 0.9rem; 
+    color: #4ade80; 
+    font-weight: 600; 
+}
+
+.empty-state { 
+    text-align: center; 
+    padding: 4rem; 
+    color: #64748b; 
+    background: rgba(15, 23, 42, 0.5); 
+    border-radius: 1rem; 
+    border: 1px dashed rgba(148, 163, 184, 0.2); 
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .details-grid { 
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+    }
+    .poster-wrapper { 
+        max-width: 300px; 
+        margin: 0 auto; 
+    }
+    .movie-h1 { 
+        font-size: 2.5rem; 
+        text-align: center; 
+    }
+    .movie-tagline { 
+        text-align: center; 
+    }
+    .meta-row { 
+        justify-content: center; 
+    }
+}
